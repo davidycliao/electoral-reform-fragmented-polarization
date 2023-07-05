@@ -71,7 +71,7 @@ options(device = function(file, width, height) {
 })
 options(knitr.table.format = "html")
 
-# pagedown::chrome_print("file:///Users/yenchiehliao/Library/CloudStorage/Dropbox/erdp-new-2023/erfp-ecpr-parliarment/erfp-ecpr-parliarment.html#1", verbose = FALSE)
+# pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/ecpr-parliarment/erfp-ecpr-parliarment.html#1", verbose = FALSE)
 
 
 ```
