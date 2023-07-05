@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>.hi-greys[Electoral Reform and Fragmented Polarization]</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Yen-Chieh Liao" />
+    <meta name="date" content="2023-06-13" />
+    <script src="libs/header-attrs-2.22.2/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-css.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# .hi-greys[Electoral Reform and Fragmented Polarization]
+]
+.subtitle[
+## .hi-slate[New Evidence from Taiwan Legislative Roll Calls]
+]
+.author[
+### David Yen-Chieh Liao
+]
+.date[
+### 13 June 2023
+]
+
+---
+
+exclude: true
+
+
+
+
+---
+layout: true
+# Puzzles
+---
+name:puzzles
+
+&lt;!-- &amp;nbsp; --&gt;
+
+- How electoral systems shape .hi-slate[legislative preference] is key to understand the theoretical development of party politics and party competition in the real world. 
+
+
+- Previous studies have proposed a number of potential reasons that explain why legislators position themselves differently under different electoral systems (e.g., Catalinac 2017) or under specific electoral rules in mixed member systems (e.g., Batto 2012; Jun and Hix 2010; Rich 2014).
+
+--
+
+- Recent decades have seen reforms of electoral systems in East Asian democracies such as Japan, South Korea, Thailand, and Taiwan, transitioning from SNTV to SMDs.
+
+
+- Besides the case studies from Japan, I believe that other countries, such as Taiwan, could be used to validate these effects.
+
+---
+
+- For example, Catalinac (2016) finds that Liberal Democratic Party candidates in SMDs .hi-slate[adopted new electoral strategies] by providing programmatic policy benefits such as national security among other candidates affiliated with LDP party, reducing promise of pork barrel goods and intra-party competition. 
+
+  + textual data: election manifesto data
+
+--
+
+- In many parliaments, such as those in the UK, Germany, and Japan, roll call votes exhibit little variation. For example, studies in Japan often use election manifestos as a data source. 
+
+
+- However, the situation may vary in places like Taiwan, indicating that the patterns of roll call votes could be different.
+
+  + voting records: roll call votes
+
+---
+layout: true
+# Theoretical Expectation
+---
+name:hypothesis
+
+### .hi-grey[Single Non-Transferable Vote (SNTV)]: 
+
+- strategic motives for coalition-building (e.g, Cox, Rosenbluth and Thies, 1999), increasing candidates to seek personal votes (e.g, Carey and Shugart, 1995)
+  
+- encourages factionalism and nurtures money politics (e.g, Shugart and Wattenberg, 2001, p.38)
+  
+- influencing the ideological positioning of parties and candidates along the spatial spectrum (Catalinac, 2016)
+
+---
+
+### .hi-grey[ Single Member District (SMD)]: 
+
+- the combination of plurality rule and a single vote per voter, has the potential to diminish intraparty competition by restricting the district magnitude to one  (Barceló and Muraoka, 2018).
+
+- where both mainstream parties converge with their copartisans (Cox, 1990; Adams, 1996; Catalinac, 2016; Downs,
+1990). 
+
+- voters may make strategic voting on party labels (Aldrich 2011), legislators sharing similar ideological preferences often form alliances, leveraging  party labels to obtain electoral support (Riker 1982).
+
+---
+
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+
+### .hi-grey[Expectation]: 
+
+- The transition from SNTV to SMDs reduced the degree of political polarization between different parties.
+
+
+- Shifting from the SNTV system to SMDs has led to greater ideological unity among legislators within the same party.
+
+
+---
+layout: true
+# Research Design
+---
+name:research-design
+
+- First, we estimate individual legislator's ideological positions from sessional roll call votes continuously covering .hi-slate[ex-ante and ex-post periods of the reform].
+
+
+- Estimating legislators' positions from 1992 to 2015 using a sessional frequency 39-item response theory (IRT) ideal point model, with recursively updated individual priors at each session.
+
+
+- Then, .hi-slate[inter- and intra-party distance of ideological positions] are constructed from the estimated positions.
+
+
+- Finally, econometric regressions are introduce to empirically examine the above two hypotheses and find noticeable shifts in ideological positions after the reform. 
+
+---
+layout: true
+# Legislative Roll Calls
+---
+name:data
+
+- Our dataset contains 39 legislative sessions __from 1996 to 2016__ and captures the changes in legislative composition before and after institutional shifts, including a range of vote items from __323__ to __1,223__ and a reduction in the number of seats from 240 to 160. 
+
+- Dealing with exceptionally long and wide datasets: EM-based ideal point estimation.
+
+&lt;img src="./images/sum_rollcall.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: true
+# Ideal Point Estimation
+---
+name:data
+
+&amp;nbsp;
+
+&lt;img src="./images/partywhip_mean.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: true
+# Two Polarization 
+---
+name:data
+
+
+### .hi-grey[Interparty Distance]: 
+
+- We operationalize .hi-slate[the interparty distance] as the general ideological differences between individual legislators and the whip of the opposing party, measured across each legislative session.
+
+`$$\mathbf{interdistance_{it}=|position_{it}-\bar{whip_{it}|},}$$`
+&amp;nbsp;
+
+
+### .hi-grey[Intraparty Distance]: 
+
+- .hi-slate[the dispersion in co-partisan legislator's estimated ideological positions (within-party disunity)]. It is calculated as: 
+`$$\mathbf{intradistance_{it}=|position_{it}-whip_{it}|,}.$$`
+---
+&amp;nbsp;
+&amp;nbsp;
+
+
+- we construct a regression model that examines whether the marginal effect of time on interparty ideological distance varies between pre- and post-implementation periods of electoral reform in Taiwan. The model also incorporates control variables such as age, gender, education level, and party affiliation. The model is specified as follows:
+
+`$$\begin{aligned}
+\mathbf{ interdistance_{it}=\alpha_{0}+\alpha_{1}electoralreform_{t}+\alpha_{2}year_{t}+} \\
+\mathbf{\alpha_{3}(year_{t}\times electoralreform_{t})+C_{it}+\epsilon_{it}^{1},} \end{aligned}$$`
+
+---
+layout: true
+# The Results
+---
+name:data
+
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&lt;img src="./images/figure_3_new.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+
+&lt;img src="./images/figure_4_new.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+layout: true
+# Takeaway
+---
+name:conclusion
+
+- We find that the SMDs did not immediately improve interparty conflicts compared to the SNTV; instead, the reform temporarily increases disagreements between mainstream parties, leading to a short-term escalation of both intra- and inter-party conflicts.
+
+  + The effect exhibits significant heterogeneity between the KMT and the DPP.
+ 
+  + This effect was particularly detrimental to members of the Kuomingtang (KMT), as compared to members of the Democratic Progress Party (DPP).
+
+
+- After six years, disagreements between the mainstream parties gradually converged and returned to their pre-reform level.
+
+---
+layout: false
+class: inverse, center, middle
+
+# Thank You
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+(function(time) {
+  var d2 = function(number) {
+    return ('0' + number).slice(-2); // left-pad 0 to minutes/seconds
+  },
+
+  time_format = function(total) {
+    var secs = Math.abs(total) / 1000;
+    var h = Math.floor(secs / 3600);
+    var m = Math.floor(secs % 3600 / 60);
+    var s = Math.round(secs % 60);
+    var res = d2(m) + ':' + d2(s);
+    if (h > 0) res = h + ':' + res;
+    return res;  // [hh:]mm:ss
+  },
+
+  slide_number_div = function(i) {
+    return document.getElementsByClassName('remark-slide-number').item(i);
+  },
+
+  current_page_number = function(i) {
+    return slide_number_div(i).firstChild.textContent;  // text "i / N"
+  };
+
+  var timer = document.createElement('span'); timer.id = 'slide-time-left';
+  var time_left = time, k = slideshow.getCurrentSlideIndex(),
+      last_page_number = current_page_number(k);
+
+  setInterval(function() {
+    time_left = time_left - 1000;
+    timer.innerHTML = ' ' + time_format(time_left);
+    if (time_left < 0) timer.style.color = 'red';
+  }, 1000);
+
+  slide_number_div(k).appendChild(timer);
+
+  slideshow.on('showSlide', function(slide) {
+    var i = slide.getSlideIndex(), n = current_page_number(i);
+    // reset timer when a new slide is shown and the page number is changed
+    if (last_page_number !== n) {
+      time_left = time; last_page_number = n;
+      timer.innerHTML = ' ' + time_format(time); timer.style.color = null;
+    }
+    slide_number_div(i).appendChild(timer);
+  });
+})(40000);
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<style>
+  .logo {
+    background-image: url(images/LY_logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0.7em;
+    right: 1em;
+    width: 100px;
+    height: 110px;
+    z-index: 0;
+  }
+</style>
+  
+  <script>
+  document
+.querySelectorAll(
+  '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+  // ':not(.inverse)' +
+    ':not(.hide-logo)'
+)
+.forEach(el => {
+  el.innerHTML += '<div class="logo"></div>';
+});
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
