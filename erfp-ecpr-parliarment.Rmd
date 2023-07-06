@@ -1,7 +1,9 @@
 ---
 title: ".hi-greys[Electoral Reform and Fragmented Polarization]"
 subtitle: ".hi-slate[New Evidence from Taiwan Legislative Roll Calls]"
-author: "David Yen-Chieh Liao (Ph.D in Politics, Essex)"
+author: 
+- "David Yen-Chieh Liao (Ph.D in Politics, Essex)"
+- "8th Conference of the ECPR Standing Group on Parliaments"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   xaringan::moon_reader:
@@ -22,15 +24,16 @@ exclude: true
 # install.packages("pacman")
 library(pacman)
 p_load(
-  kableExtra, snakecase, janitor, huxtable, pagedown, # Formating 
-  ggplot2, ggthemes, ggeffects, ggridges, 
+  kableExtra, snakecase, janitor, huxtable, pagedown,    # formatting 
+  ggplot2, ggthemes, ggeffects, ggridges,                # visualization
   igraph, network, ggpubr,
-  ggformula, gridExtra, RColorBrewer, # Visualization
-  tidyverse, lubridate, stringr, dplyr, purrr, tibble, tidyr, lubridate, knitr, # General tidyverse toolkit 
-  readxl,reshape2, 
-  parallel, future, furrr, future.apply, doParallel, # Paralleling
-  emIRT, MCMCpack, wnominate, pscl, rgenoud, basicspace,  # for scaling   
-  devtools, reticulate, usethis # programming
+  ggformula, gridExtra, RColorBrewer,                    
+  tidyverse, lubridate, stringr, dplyr, purrr,           # tidyverse & reshape  
+  tibble, tidyr, lubridate, knitr,                       
+  readxl, reshape2, 
+  parallel, future, furrr, future.apply, doParallel,     # paralleling box
+  emIRT, MCMCpack, wnominate, pscl, rgenoud, basicspace, # scaling toolbox   
+  devtools, reticulate, usethis                          # R programming
 )
 
 
@@ -130,7 +133,6 @@ layout: true
 # .smaller[Motivation (2)]
 ---
 name:motivation
-
 
 - .ul.small.hi-grey[Election Manifesto:] <br> 
 
@@ -346,22 +348,41 @@ layout: true
 # .smaller[Robustness & Appendix]
 ---
 
-- .grey[OLS Regression Predicting the Impact of Electoral Reform] .grey[([Table 1](#table-1) | [Table 2](#table-2))] <br> 
+- .smallest.hi-slate[Average Ideal Points of Legislators and Party Whips’ Positions across Legislative Sessions] .tiny[([Figure 2](#figure-2))]  <br> 
 
-- .grey[Robustness Estimation Using Separate Samples] .grey[([Table F.5](#seperate-inter) | [Table F.6](#seperate-intra))] <br> 
+- .smallest.hi-slate[OLS Regression Predicting the Impact of Electoral Reform] .tiny[.grey[([Table 1](#table-1) | [Table 2](#table-2))]] <br> 
 
-- .grey[Evaluating the Heterogeneity in Voting Records]  .grey[([Table G.7](#table-g.7) | [Table G.8](##table-g.8))] <br> 
+- .smallest.hi-slate[Estimated Legislators’ Positions] .tiny[.grey[([Table E.3](#table-e3) | [Table E.4s](#table-e4))]] <br> 
 
-- .grey[Robustness Assessment of the Effect of a Reform using Panel Data: Evidence from the 6th to 7th Term Observations] .grey[([Table H.9](#table-h.9) ] <br> 
+- .smallest.hi-slate[Robustness Estimation Using Separate Samples] .tiny[.grey[([Table F.5](#seperate-inter) | [Table F.6](#seperate-intra))]] <br> 
 
-- .grey[Robustness Assessment of the Reform's Effect at the Session Level using GMM] .grey[([Table I.10](#table-i.10))] <br> 
+- .smallest.hi-slate[Evaluating the Heterogeneity in Voting Records]  .tiny[.grey[([Table G.7](#table-g.7) | [Table G.8](##table-g.8))]] <br> 
 
+- .smallest.hi-slate[Robustness Assessment of the Effect of a Reform using Panel Data: Evidence from the 6th to 7th Term Observations] .tiny[.grey[([Table H.9](#table-h.9))]] <br> 
+
+- .smallest.hi-slate[Robustness Assessment of the Reform's Effect at the Session Level using GMM] .tiny[.grey[([Table I.10](#table-i.10))]] <br> 
+
+- .smallest.hi-slate[Validating Senior Legislators Reelected across All Legislative Sessions] .tiny[.grey[([Table A.1](#table-a1))]] <br> 
 
 ---
 layout: false
 class: inverse, center, middle
 
 # Thank You
+
+---
+layout: true
+# .smaller[Average Roll Calls]
+---
+name:figure-2
+
+&nbsp;
+
+```{r echo = F, out.width = "80%"}
+knitr::include_graphics("./images/mean_rollcall.png")
+```
+
+
 
 ---
 layout: true
@@ -382,6 +403,27 @@ knitr::include_graphics("./images/table2.png")
 ```
 
 
+
+---
+layout: true
+# .smaller[Estimated Legislators’ Positions for Two Major Parties]
+---
+name:table-e3
+
+
+```{r echo = F, out.width = "90%"}
+knitr::include_graphics("./images/major_postions_session.png")
+```
+
+---
+layout: true
+# .smaller[ Estimated Legislators’ Positions for Small Parties]
+---
+name:table-e4
+
+```{r echo = F, out.width = "90%"}
+knitr::include_graphics("./images/minor_postions_session.png")
+```
 
 ---
 layout: true
@@ -441,4 +483,14 @@ name:table-i.10
 
 ```{r echo = F, out.width = "90%"}
 knitr::include_graphics("./images/tableI.10.png")
+```
+
+---
+layout: true
+# .smaller[Qualitative Validation]
+---
+name:figure-a1
+
+```{r echo = F, out.width = "70%"}
+knitr::include_graphics("./images/validation.png")
 ```
