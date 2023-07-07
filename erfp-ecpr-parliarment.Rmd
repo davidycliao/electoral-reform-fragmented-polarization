@@ -252,9 +252,7 @@ layout: true
 ---
 name:data
 
-&nbsp;
-
-```{r echo = F, out.width = "80%"}
+```{r echo = F, out.width = "100%"}
 knitr::include_graphics("./images/partywhip_mean.png")
 ```
 
@@ -372,13 +370,11 @@ class: inverse, center, middle
 
 ---
 layout: true
-# .smaller[Average Roll Calls]
+# .smaller[Roll Call Ratios]
 ---
 name:figure-2
 
-&nbsp;
-
-```{r echo = F, out.width = "80%"}
+```{r echo = F, out.width = "100%"}
 knitr::include_graphics("./images/mean_rollcall.png")
 ```
 
@@ -406,22 +402,22 @@ knitr::include_graphics("./images/table2.png")
 
 ---
 layout: true
-# .smaller[Estimated Legislators’ Positions for Two Major Parties]
+# .smaller[Major Parties]
 ---
 name:table-e3
 
 
-```{r echo = F, out.width = "90%"}
+```{r echo = F, out.width = "100%"}
 knitr::include_graphics("./images/major_postions_session.png")
 ```
 
 ---
 layout: true
-# .smaller[ Estimated Legislators’ Positions for Small Parties]
+# .smaller[Small Parties]
 ---
 name:table-e4
 
-```{r echo = F, out.width = "90%"}
+```{r echo = F, out.width = "100%"}
 knitr::include_graphics("./images/minor_postions_session.png")
 ```
 
@@ -491,6 +487,6 @@ layout: true
 ---
 name:figure-a1
 
-```{r echo = F, out.width = "70%"}
+```{r echo = F, out.width = "100%"}
 knitr::include_graphics("./images/validation.png")
 ```
