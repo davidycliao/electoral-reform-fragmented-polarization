@@ -74,7 +74,7 @@ options(device = function(file, width, height) {
 })
 options(knitr.table.format = "html")
 
-# pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/ecpr-parliarment/erfp-ecpr-parliarment.html#1", verbose = FALSE)
+# pagedown::chrome_print("file:///Users/yenchiehliao/Dropbox/electoral-reform-fragmented-polarization/slides/electoral-reform-fragmented-polarization.html#1", verbose = FALSE)
 
 
 ```
