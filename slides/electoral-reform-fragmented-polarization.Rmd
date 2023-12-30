@@ -2,8 +2,8 @@
 title: ".hi-greys[Electoral Reform and Fragmented Polarization]"
 subtitle: ".small-slate[New Evidence from Taiwan Legislative Roll Calls]"
 author: 
-  - .tiny[Yen-Chieh (David) Liao | 2023 ECPR SG Parliarment]
-  - .tiny[Postdoc at University College Dublin]
+  - .slate.small[Yen-Chieh (David) Liao | 2023 ECPR SG Parliarment]
+  - .slate.small[Postdoc at University College Dublin]
 # date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   xaringan::moon_reader:
